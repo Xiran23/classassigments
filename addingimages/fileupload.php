@@ -32,3 +32,7 @@ move_uploaded_file($tempname,$folder);
 
 
 ?>
+<!-- <img src="images/Screenshot (58).png" height="100px" width="100px"> -->
+<br>
+
+<img src="<?php echo $folder;?>" height="200px" width="400px">
