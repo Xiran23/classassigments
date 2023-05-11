@@ -1,6 +1,6 @@
 <?php 
 include('../connection/db.php');
-error_reporting(0);
+// error_reporting(0);
 
 
 ?>
@@ -36,3 +36,19 @@ move_uploaded_file($tempname,$folder);
 <br>
 
 <img src="<?php echo $folder;?>" height="200px" width="400px">
+
+<?php
+if(isset($_POST['submit']))
+ $query = "INSERT INTO std_img (img_source) VALUES('$folder')";
+
+ $data = mysqli_query($conn,$query);
+ if($data){
+    echo "data inserted success fully ";
+ }
+ else {
+    echo "img insertion failed ";
+ }
+
+
+
+?>
